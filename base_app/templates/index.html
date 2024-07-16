@@ -23,6 +23,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .avatar-box {
+      border-radius: 10%;
+      background-color: red;
+      overflow: hidden;
+      width: 120px; /* Default width for larger screens */
+      {% comment %} height: 80px; /* Maintain aspect ratio */ {% endcomment %}
+    }
+    .avatar-box img {
+      width: 100%; /* Make the image fill the container */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    /* Media query for phones */
+    @media (max-width: 600px) {
+      .avatar-box {
+        width: 80px; /* Smaller size for phones */
+        height: 80px; /* Maintain aspect ratio */
+      }
+    }
+  </style>
 </head>
 
 <body>
