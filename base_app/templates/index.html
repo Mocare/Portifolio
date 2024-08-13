@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +123,7 @@
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
 
-              <time datetime="1982-06-23">June 26, 2002</time>
+              <time datetime="1982-06-23">June 26, 2001</time>
             </div>
 
           </li>
@@ -248,7 +248,7 @@
         <section class="service">
 
           <h3 class="h3 service-title">What i'm doing</h3>
-t
+
           <ul class="service-list">
 
             <li class="service-item">
@@ -261,7 +261,8 @@ t
                 <h4 class="h4 service-item-title"> Web design </h4>
 
                 <p class="service-item-text">
-                  nnovative Web Design for Modern Businesses                </p>
+                  Innovative Web Design for Modern Businesses,
+                  "Designing Experiences, Shaping Interactions"                </p>
               </div>
 
             </li>
@@ -277,6 +278,7 @@ t
 
                 <p class="service-item-text">
                   High-quality development of sites at the professional level.
+                  "Building the Web, Empowering Your Vision"
                 </p>
               </div>
 
@@ -292,7 +294,8 @@ t
                   <h4 class="h4 service-item-title">System development</h4>
   
                   <p class="service-item-text">
-                    Turning Ideas into Seamless Systems                  </p>
+                    Turning Ideas into Seamless Systems  
+                    "Engineering Solutions, Driving Innovation"                   </p>
                 </div>
   
               </li>
@@ -308,6 +311,7 @@ t
 
                 <p class="service-item-text">
                   I make high-quality graphic of any category at a professional level.
+                  "Crafting Visual Stories, Inspiring Creativity"
                 </p>
               </div>
 
@@ -520,6 +524,18 @@ Troubleshoot and resolve hardware and software issues.
               </div>
 
             </li>
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">UI/UX design</h5>
+                <data value="70">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
 
             <li class="skills-item">
 
@@ -538,11 +554,11 @@ Troubleshoot and resolve hardware and software issues.
 
               <div class="title-wrapper">
                 <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
+                <data value="50">80%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
+                <div class="skill-progress-fill" style="width: 80%;"></div>
               </div>
 
             </li>
@@ -638,8 +654,10 @@ Troubleshoot and resolve hardware and software issues.
 
               </a>
             </li>
+            
+            </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
 
                 <figure class="project-img">
@@ -647,12 +665,29 @@ Troubleshoot and resolve hardware and software issues.
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="{% static './mokea2/system.png'%}" alt="marathon" loading="lazy">
+                  <img src="{% static './mokea2/ui.jpeg'%}" alt="Tigopesa App" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">marahon</h3>
+                <h3 class="project-title">Tigopesa App</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="{% static './mokea2/ux.jpeg'%}" alt="Sample UI/UX App" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Sample UI/UX App"</h3>
+
+                <p class="project-category">Web design</p>
 
               </a>
             </li>
@@ -683,56 +718,36 @@ Troubleshoot and resolve hardware and software issues.
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="{% static './mokea2/mara.png'%}" alt="marathon" loading="lazy">
+                  <img src="{% static './mokea2/eb.jpeg'%}" alt="Sample site" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">marahon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="{% static './mokea2/mara.png'%}" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">payment.</h3>
+                <h3 class="project-title">Sample site</h3>
 
                 <p class="project-category">Web design</p>
 
               </a>
             </li>
 
-            
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="system development">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="{% static './mokea2/maraevent.png'%}" alt="summary" loading="lazy">
+                  <img src="{% static './mokea2/system.jpeg'%}" alt="logistics" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Summary</h3>
+                <h3 class="project-title">logistics</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">system development</p>
 
               </a>
             </li>
 
-            
+        
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="system development">
               <a href="#">
 
                 <figure class="project-img">
@@ -745,11 +760,12 @@ Troubleshoot and resolve hardware and software issues.
 
                 <h3 class="project-title">system</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">system development</p>
 
               </a>
             </li>
-
+            <li class="project-item  active" data-filter-item data-category="system development">
+            
           </ul>
 
         </section>
@@ -820,4 +836,5 @@ Troubleshoot and resolve hardware and software issues.
 
 </body>
 
-</html>
+</html> 
+</html> 

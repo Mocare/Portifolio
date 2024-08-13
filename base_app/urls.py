@@ -5,10 +5,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('upload/', views.upload_profile, name='upload_profile'),
-    path('profiles/', views.profile_list, name='profile_list'),
-
-
-   
+    
 
 ] 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

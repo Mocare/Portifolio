@@ -1,24 +1,42 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
-# Create your views here.
+# # Create your views here.
+
+# def index(request):
+#     return render(request,'index.html')
+# #apa ndipo napoandika requests zangu ili zivutwe na urls kwenda kua displayed kwenye browser
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponse
+from .models import Profile, SocialLink, Service, Education, Experience, Skill, Project, Testimonial
+from .forms import ContactForm
 
 def index(request):
-    return render(request,'index.html')
-#apa ndipo napoandika requests zangu ili zivutwe na urls kwenda kua displayed kwenye browser
-
-from django.shortcuts import render, redirect
-from .forms import ProfileForm
-
-def upload_profile(request):
-    if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES)
+    profile = get_object_or_404(Profile, pk=1)  # Assuming you have a profile with ID 1
+    social_links = profile.social_links.all()
+    services = profile.services.all()
+    education_list = profile.education.all()
+    experience_list = profile.experience.all()
+    skills = profile.skills.all()
+    projects = profile.projects.all()
+    testimonials = profile.testimonials.all()
+    
+    if request.method == "POST":
+        form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('profile_list')
+            # Process form data here
+            return redirect('index')
     else:
-        form = ProfileForm()
-    return render(request, 'upload_profile.html', {'form': form})
+        form = ContactForm()
 
-def profile_list(request):
-    profiles = profile_list.objects.all()
-    return render(request, 'profile_list.html', {'profiles': profiles})
+    context = {
+        'profile': profile,
+        'social_links': social_links,
+        'services': services,
+        'education_list': education_list,
+        'experience_list': experience_list,
+        'skills': skills,
+        'projects': projects,
+        'testimonials': testimonials,
+        'form': form
+    }
+    return render(request, 'index.html', context)
